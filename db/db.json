@@ -1,0 +1,78 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "name": "John Smith",
+            "phone": "945254858",
+            "address": "S56/d67 New Delhi India",
+            "email": "johnsmith3434@gmail.com"
+        },
+        {
+            "id": 2,
+            "name": "John Smith",
+            "phone": "945254858",
+            "address": "S56/d67 New Delhi India",
+            "email": "johnsmith3434@gmail.com"
+        },
+        {
+            "id": 3,
+            "name": "John Smith",
+            "phone": "945254858",
+            "address": "S56/d67 New Delhi India",
+            "email": "johnsmith3434@gmail.com"
+        },
+        {
+            "id": 4,
+            "name": "John Smith",
+            "phone": "945254858",
+            "address": "S56/d67 New Delhi India",
+            "email": "johnsmith3434@gmail.com"
+        },
+        {
+            "id": 5,
+            "name": "John Smith",
+            "phone": "945254858",
+            "address": "S56/d67 New Delhi India",
+            "email": "johnsmith3434@gmail.com"
+        },
+        {
+            "id": 6,
+            "name": "John Smith",
+            "phone": "945254858",
+            "address": "S56/d67 New Delhi India",
+            "email": "johnsmith3434@gmail.com"
+        }
+    ],
+    "product": [
+        {
+            "id": 1,
+            "product-name": "Shoes",
+            "brand": "adidas",
+            "price": 9999
+        },
+        {
+            "id": 2,
+            "product-name": "Shoes",
+            "brand": "adidas",
+            "price": 9999
+        },
+        {
+            "id": 3,
+            "product-name": "Shoes",
+            "brand": "adidas",
+            "price": 9999
+        },
+        {
+            "id": 1,
+            "product-name": "Shoes",
+            "brand": "adidas",
+            "price": 9999
+        },
+        {
+            "id": 1,
+            "product-name": "Shoes",
+            "brand": "adidas",
+            "price": 9999
+        }
+    ]
+}
