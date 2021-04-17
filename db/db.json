@@ -1,78 +1,60 @@
 {
-    "user": [
-        {
-            "id": 1,
-            "name": "John Smith",
-            "phone": "945254858",
-            "address": "S56/d67 New Delhi India",
-            "email": "johnsmith3434@gmail.com"
-        },
-        {
-            "id": 2,
-            "name": "John Smith",
-            "phone": "945254858",
-            "address": "S56/d67 New Delhi India",
-            "email": "johnsmith3434@gmail.com"
-        },
-        {
-            "id": 3,
-            "name": "John Smith",
-            "phone": "945254858",
-            "address": "S56/d67 New Delhi India",
-            "email": "johnsmith3434@gmail.com"
-        },
-        {
-            "id": 4,
-            "name": "John Smith",
-            "phone": "945254858",
-            "address": "S56/d67 New Delhi India",
-            "email": "johnsmith3434@gmail.com"
-        },
-        {
-            "id": 5,
-            "name": "John Smith",
-            "phone": "945254858",
-            "address": "S56/d67 New Delhi India",
-            "email": "johnsmith3434@gmail.com"
-        },
-        {
-            "id": 6,
-            "name": "John Smith",
-            "phone": "945254858",
-            "address": "S56/d67 New Delhi India",
-            "email": "johnsmith3434@gmail.com"
-        }
-    ],
-    "product": [
-        {
-            "id": 1,
-            "product-name": "Shoes",
-            "brand": "adidas",
-            "price": 9999
-        },
-        {
-            "id": 2,
-            "product-name": "Shoes",
-            "brand": "adidas",
-            "price": 9999
-        },
-        {
-            "id": 3,
-            "product-name": "Shoes",
-            "brand": "adidas",
-            "price": 9999
-        },
-        {
-            "id": 1,
-            "product-name": "Shoes",
-            "brand": "adidas",
-            "price": 9999
-        },
-        {
-            "id": 1,
-            "product-name": "Shoes",
-            "brand": "adidas",
-            "price": 9999
-        }
-    ]
+  "user": [
+    {
+      "id": 1,
+      "name": "Pizza Hut",
+      "address": " New Delhi ",
+      "email": "pizzahut56@gmail.com",
+      "rating": "3.8"
+    },
+    {
+      "id": 2,
+      "name": "Dominos",
+      "address": " Mumbai",
+      "email": "dominos3434@gmail.com",
+      "rating": "4.5"
+    },
+    {
+      "id": 3,
+      "name": "Burger King",
+      "address": " Varansi ",
+      "email": "burgerking3434@gmail.com",
+      "rating": "4.7"
+    },
+    {
+      "id": 4,
+      "name": "KFC",
+      "address": "  Noida ",
+      "email": "kfc3434@gmail.com",
+      "rating": "4.5"
+    },
+    {
+      "id": 5,
+      "name": "McDonald",
+      "address": " New Delhi ",
+      "email": "mcdonald3434@gmail.com",
+      "rating": "2.5"
+    },
+    {
+      "id": 6,
+      "name": "BBQ Nation",
+      "address": "  Varansi ",
+      "email": "bbqnation3434@gmail.com",
+      "rating": "5"
+    },
+    {
+      "id": 7,
+      "name": "Sanjha Chulha",
+      "address": "Chennai ",
+      "email": "sanjhachulha3434@gmail.com",
+      "rating": "4.5"
+    },
+    {
+      "name": "KFC",
+      "address": "Hyderabad",
+      "email": "kfchyderabad2@gmail.com",
+      "rating": "4.1",
+      "id": 8
+    }
+  ]
 }
