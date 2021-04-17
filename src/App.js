@@ -42,9 +42,14 @@ function App() {
         <Route path="/create">
           <RestaurantCreate />
         </Route>
-        <Route path="/update">
-          <RestaurantUpdate />
-        </Route>
+        {/* We are passing all the props we got by ...props */}
+        {/* We will get id under in match->params->id */}
+        <Route
+          path="/update/:id"
+          render={props => (
+            <RestaurantUpdate {...props}/>
+          )}
+        ></Route>
         <Route path="/search">
           <RestaurantSearch />
         </Route>

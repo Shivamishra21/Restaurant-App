@@ -45,15 +45,16 @@
     {
       "id": 7,
       "name": "Sanjha Chulha",
-      "address": "Chennai ",
-      "email": "sanjhachulha3434@gmail.com",
-      "rating": "4.5"
+      "phone": "9452009348",
+      "address": "Goa ",
+      "email": "sanjhachulhagoa3434@gmail.com",
+      "rating": "4.1"
     },
     {
       "name": "KFC",
-      "address": "Hyderabad",
-      "email": "kfchyderabad2@gmail.com",
-      "rating": "4.1",
+      "email": "kfchandigarh2@gmail.com",
+      "address": "Chandigarh",
+      "rating": "4.3",
       "id": 8
     }
   ]

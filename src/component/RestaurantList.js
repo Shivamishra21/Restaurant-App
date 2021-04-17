@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 class RestaurantList extends Component {
   constructor() {
@@ -9,10 +10,10 @@ class RestaurantList extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3000/user")
+    fetch("http://localhost:3000/user",{method:"Get"})
       .then((response) => {
         response.json().then((result) => {
-          console.log(result);
+       //   console.log(result);
           this.setState({
             list: result,
           });
@@ -35,6 +36,7 @@ class RestaurantList extends Component {
                   <th>Location</th>
                   <th>Rating</th>
                   <th>Email</th>
+                  <th>Operation</th>
                 </tr>
               </thead>
               <tbody>
@@ -44,7 +46,8 @@ class RestaurantList extends Component {
                     <td>{item.address}</td>
                     <td> {item.rating}</td>
                     <td>{item.email}</td>
-                  </tr>
+                    <td><Link to ={"/update/"+item.id}>Edit</Link></td>
+                  </tr> 
                 ))}
               </tbody>
             </Table>
