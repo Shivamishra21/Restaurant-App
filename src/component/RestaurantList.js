@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Table } from "react-bootstrap";
-import {Link} from "react-router-dom"
+import { Table,Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 class RestaurantList extends Component {
   constructor() {
@@ -10,10 +12,13 @@ class RestaurantList extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3000/user",{method:"Get"})
+    this.getData()
+  }
+  getData(){
+    fetch("http://localhost:3000/user", { method: "Get" })
       .then((response) => {
         response.json().then((result) => {
-       //   console.log(result);
+          //   console.log(result);
           this.setState({
             list: result,
           });
@@ -23,9 +28,18 @@ class RestaurantList extends Component {
         console.log("There is some issue in API calling ", err);
       });
   }
+  delete(id){
+
+    fetch("http://localhost:3000/user/"+id,{method:'Delete'}).then((response)=>{
+      response.json().then((result)=>{
+        // console.log(" ")
+      })
+    })
+    this.getData()
+  }
   render() {
     return (
-      <div>
+      <Container>
         <h1>Restaurant List</h1>
         {this.state.list ? (
           <div>
@@ -46,8 +60,16 @@ class RestaurantList extends Component {
                     <td>{item.address}</td>
                     <td> {item.rating}</td>
                     <td>{item.email}</td>
-                    <td><Link to ={"/update/"+item.id}>Edit</Link></td>
-                  </tr> 
+                    <td>
+                      <Link to={"/update/" + item.id}>
+                        <FontAwesomeIcon icon={faEdit} />{"       "}
+                      </Link>
+                      {/* <Link to={"/update/" + item.id}>
+                        <FontAwesomeIcon icon={faTrashAlt} color="red" />
+                      </Link> */}
+                      <span onClick={()=>{this.delete(item.id);}}><FontAwesomeIcon icon={faTrashAlt} color="red"/></span>
+                    </td>
+                  </tr>
                 ))}
               </tbody>
             </Table>
@@ -55,7 +77,7 @@ class RestaurantList extends Component {
         ) : (
           <p>Loading...</p>
         )}
-      </div>
+        </Container>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Table,Container,Form,Button } from "react-bootstrap";
 class RestaurantCreate extends React.Component {
   constructor() {
     super();
@@ -24,58 +25,73 @@ class RestaurantCreate extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Container>
         <h1>Restaurant Create</h1>
         <div>
-          <input
+          <Form.Control
+            type="text"
+            placeholder="Restaurant name"
+        
             onChange={(event) => {
               this.setState({
                 name: event.target.value,
               });
             }}
-            placeholder="Restaurant name"
           />
           <br />
-          <br />
-          <input
+       
+          <Form.Control
+            type="text"
+            placeholder="Restaurant email"
+         
             onChange={(event) => {
               this.setState({
                 email: event.target.value,
               });
             }}
-            placeholder="Restaurant Email"
           />
           <br />
-          <br />
-          <input
+        
+          <Form.Control
+            type="text"
+            placeholder="Restaurant address"
+     
             onChange={(event) => {
               this.setState({
                 address: event.target.value,
               });
             }}
-            placeholder="Restaurant Location"
           />
           <br />
-          <br />
-          <input
+         
+          <Form.Control
+            type="text"
+            placeholder="Restaurant rating"
+          
             onChange={(event) => {
               this.setState({
                 rating: event.target.value,
               });
             }}
-            placeholder="Restaurant rating"
-          />{" "}
+          />
           <br />
-          <br />
+         
+          <div className="mb-2">
+            <Button variant="primary" size="lg" onClick={()=>this.create()}>
+              Add Restaurant
+            </Button>{" "}
+          </div>
+
+          {/* 
           <button
             onClick={() => {
-              this.create();
+              this.update();
             }}
           >
-            Add Restaurant
-          </button>
+            Update Restaurant
+          </button> */}
         </div>
-      </div>
+      </Container>
     );
   }
 }

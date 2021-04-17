@@ -1,5 +1,4 @@
 import "./App.css";
-
 import RestaurantCreate from "./component/RestaurantCreate";
 import RestaurantDetail from "./component/RestaurantDetail";
 import RestaurantUpdate from "./component/RestaurantUpdate";
@@ -8,6 +7,15 @@ import RestaurantSearch from "./component/RestaurantSearch";
 import Home from "./component/Home";
 import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faPlusSquare,
+  faListAlt,
+  faSearch,
+  faSignInAlt
+} from "@fortawesome/free-solid-svg-icons";
+
 function App() {
   return (
     <div className="App">
@@ -18,20 +26,34 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#home">
-                <Link to="/">Home</Link>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faHome} /> Home{" "}
+                </Link>
               </Nav.Link>
               <Nav.Link href="#link">
-                <Link to="/create">Create</Link>
+                <Link to="/create">
+                  <FontAwesomeIcon icon={faPlusSquare} /> Create{" "}
+                </Link>
               </Nav.Link>
               <Nav.Link href="#link">
-                <Link to="/list">List</Link>
+                <Link to="/list">
+                  <FontAwesomeIcon icon={faListAlt} /> List{" "}
+                </Link>
               </Nav.Link>
               <Nav.Link href="#link">
-                <Link to="/search">Search</Link>
+                <Link to="/search">
+                  <FontAwesomeIcon icon={faSearch} /> Search{" "}
+                </Link>
               </Nav.Link>
               <Nav.Link href="#link">
-                <Link to="/update">Update</Link>
+                <Link to="/search">
+                  <FontAwesomeIcon icon={faSignInAlt} /> Login{" "}
+                </Link>
               </Nav.Link>
+              
+              {/* <Nav.Link href="#link">
+                <Link to="/update"><FontAwesomeIcon icon={faPenSquare} color="black"/></Link>
+              </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -46,9 +68,7 @@ function App() {
         {/* We will get id under in match->params->id */}
         <Route
           path="/update/:id"
-          render={props => (
-            <RestaurantUpdate {...props}/>
-          )}
+          render={(props) => <RestaurantUpdate {...props} />}
         ></Route>
         <Route path="/search">
           <RestaurantSearch />

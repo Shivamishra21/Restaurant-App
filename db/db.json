@@ -16,17 +16,17 @@
     },
     {
       "id": 3,
-      "name": "Burger King",
-      "address": " Varansi ",
-      "email": "burgerking3434@gmail.com",
-      "rating": "4.7"
+      "name": "BBQ Nation",
+      "address": "Cantoment Varansi ",
+      "email": "bbqnation56@gmail.com",
+      "rating": "4.3"
     },
     {
       "id": 4,
-      "name": "KFC",
-      "address": "  Noida ",
-      "email": "kfc3434@gmail.com",
-      "rating": "4.5"
+      "name": "Cafe Grill",
+      "address": " New Delhi ",
+      "email": "cafegrill1256@gmail.com",
+      "rating": "3.8"
     },
     {
       "id": 5,
@@ -36,26 +36,32 @@
       "rating": "2.5"
     },
     {
-      "id": 6,
-      "name": "BBQ Nation",
-      "address": "  Varansi ",
-      "email": "bbqnation3434@gmail.com",
-      "rating": "5"
-    },
-    {
-      "id": 7,
-      "name": "Sanjha Chulha",
-      "phone": "9452009348",
-      "address": "Goa ",
-      "email": "sanjhachulhagoa3434@gmail.com",
-      "rating": "4.1"
-    },
-    {
+      "id": 8,
       "name": "KFC",
       "email": "kfchandigarh2@gmail.com",
       "address": "Chandigarh",
-      "rating": "4.3",
-      "id": 8
+      "rating": "4.3"
+    },
+    {
+      "id": 9,
+      "name": "KFC",
+      "email": "kfc452@gmail.com",
+      "address": "New Delhi",
+      "rating": "4"
+    },
+    {
+      "id": 10,
+      "name": "Shawarma",
+      "address": " Mumbai ",
+      "email": "shawarma56@gmail.com",
+      "rating": "4.0"
+    },
+    {
+      "name": "Brio",
+      "address": "Chicago , U.S.A",
+      "email": "briochicago@gmail.com",
+      "rating": "4.7",
+      "id": 11
     }
   ]
 }
