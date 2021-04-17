@@ -15,7 +15,7 @@ class RestaurantList extends Component {
     this.getData()
   }
   getData(){
-    fetch("http://localhost:3000/user", { method: "Get" })
+    fetch("http://localhost:3000/restaurant", { method: "Get" })
       .then((response) => {
         response.json().then((result) => {
           //   console.log(result);
@@ -30,7 +30,7 @@ class RestaurantList extends Component {
   }
   delete(id){
 
-    fetch("http://localhost:3000/user/"+id,{method:'Delete'}).then((response)=>{
+    fetch("http://localhost:3000/restaurant/"+id,{method:'Delete'}).then((response)=>{
       response.json().then((result)=>{
         // console.log(" ")
       })

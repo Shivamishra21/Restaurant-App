@@ -11,7 +11,7 @@ class RestaurantCreate extends React.Component {
     };
   }
   create() {
-    fetch("http://localhost:3000/user", {
+    fetch("http://localhost:3000/restaurant", {
       method: "Post",
       headers:{
         'content-Type':'application/json'

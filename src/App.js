@@ -4,6 +4,7 @@ import RestaurantDetail from "./component/RestaurantDetail";
 import RestaurantUpdate from "./component/RestaurantUpdate";
 import RestaurantList from "./component/RestaurantList";
 import RestaurantSearch from "./component/RestaurantSearch";
+import Login from "./component/Login";
 import Home from "./component/Home";
 import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -13,8 +14,9 @@ import {
   faPlusSquare,
   faListAlt,
   faSearch,
-  faSignInAlt
+  faUserAlt
 } from "@fortawesome/free-solid-svg-icons";
+
 
 function App() {
   return (
@@ -45,9 +47,9 @@ function App() {
                   <FontAwesomeIcon icon={faSearch} /> Search{" "}
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#link">
-                <Link to="/search">
-                  <FontAwesomeIcon icon={faSignInAlt} /> Login{" "}
+              <Nav.Link href="#login">
+                <Link to="/login">
+                  <FontAwesomeIcon icon={faUserAlt} /> Login{" "}
                 </Link>
               </Nav.Link>
               
@@ -72,6 +74,9 @@ function App() {
         ></Route>
         <Route path="/search">
           <RestaurantSearch />
+        </Route>
+        <Route path="/login" render={(props) => <Login {...props} />}>
+        
         </Route>
         <Route path="/detail">
           <RestaurantDetail />

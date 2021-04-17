@@ -15,7 +15,7 @@ class RestaurantSearch extends Component {
   }
   search(item) {
     this.setState({ lastSearch: item });
-    fetch("http://localhost:3000/user?q=" + item, { method: "Get" }).then(
+    fetch("http://localhost:3000/restaurant?q=" + item, { method: "Get" }).then(
       (response) => {
         response.json().then((result) => {
           //manipulating the value of state variable
@@ -36,7 +36,7 @@ class RestaurantSearch extends Component {
     );
   }
   delete(id) {
-    fetch("http://localhost:3000/user/" + id, { method: "Delete" }).then(
+    fetch("http://localhost:3000/restaurant/" + id, { method: "Delete" }).then(
       (response) => {
         response.json().then((result) => {
           // console.log(" ")

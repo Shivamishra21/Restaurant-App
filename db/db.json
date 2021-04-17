@@ -1,5 +1,9 @@
 {
-  "user": [
+  "login":[{
+    "name":"Shiva",
+    "password":"resto@2023"
+  }],
+  "restaurant": [
     {
       "id": 1,
       "name": "Pizza Hut",
