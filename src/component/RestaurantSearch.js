@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Table,Form,Container } from "react-bootstrap";
+import { Table, Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
-
+import RestaurantNavbar from "./RestaurantNavbar";
 class RestaurantSearch extends Component {
   constructor() {
     super();
@@ -44,75 +44,81 @@ class RestaurantSearch extends Component {
         });
       }
     );
-    
   }
   render() {
     return (
-   <Container>
-        <h1>Restaurant Search</h1>
-        <div>
-          {" "}
-          {/* <input
-            type="text"
-            placeholder="Search"
-            onChange={(event) => {
-              this.search(event.target.value);
-            }}
-          ></input> */}
-          <Form.Control type="text" placeholder="Search" onChange={(event) => {
-              this.search(event.target.value);
-            }} />
-        </div>
-        <br />
-        <br />
+      <div>
+        <RestaurantNavbar />
+        <Container>
+          <h1>Restaurant Search</h1>
+          <div>
+            {" "}
+            {/* <input
+          type="text"
+          placeholder="Search"
+          onChange={(event) => {
+            this.search(event.target.value);
+          }}
+        ></input> */}
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              onChange={(event) => {
+                this.search(event.target.value);
+              }}
+            />
+          </div>
+          <br />
+          <br />
 
-        <div>
-          {this.state.searchData ? (
-            <div>
-              {
-                <Table striped bordered hover>
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Location</th>
-                      <th>Rating</th>
-                      <th>Email</th>
-                      <th>Operation</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {this.state.searchData.map((item) => (
+          <div>
+            {this.state.searchData ? (
+              <div>
+                {
+                  <Table striped bordered hover>
+                    <thead>
                       <tr>
-                        <td>{item.name} </td>
-                        <td>{item.address}</td>
-                        <td> {item.rating}</td>
-                        <td>{item.email}</td>
-                        <td>
-                          <Link to={"/update/" + item.id}>
-                            {"    "}
-                            <FontAwesomeIcon icon={faEdit} />
-                          </Link>
-                          <span
-                            onClick={() => {
-                              this.delete(item.id);
-                            }}
-                          >
-                            <FontAwesomeIcon icon={faTrashAlt} color="red" />
-                          </span>
-                        </td>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Rating</th>
+                        <th>Email</th>
+                        <th>Operation</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              }
-            </div>
-          ) : (
-            ""
-          )}
-          {this.state.noData ? <h4>No item found</h4> : ""}
-          {/* showing "no item found" when it does not matches and nothing when nothing is types in search box */}
-        </div>
+                    </thead>
+                    <tbody>
+                      {this.state.searchData.map((item) => (
+                        <tr>
+                          <td>{item.name} </td>
+                          <td>{item.address}</td>
+                          <td> {item.rating}</td>
+                          <td>{item.email}</td>
+                          <td>
+                            <Link to={"/update/" + item.id}>
+                              {"    "}
+                              <FontAwesomeIcon icon={faEdit} />
+                            </Link>
+                            <span
+                              onClick={() => {
+                                this.delete(item.id);
+                              }}
+                            >
+                              <FontAwesomeIcon icon={faTrashAlt} color="red" />
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                }
+              </div>
+            ) : (
+              ""
+            )}
+            {this.state.noData ? <h4>No item found</h4> : ""}
+            {/* showing "no item found" when it does not matches and nothing when nothing is types in search box */}
+          </div>
         </Container>
+      </div>
     );
   }
 }

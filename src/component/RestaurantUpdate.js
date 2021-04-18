@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import RestaurantNavbar from "./RestaurantNavbar";
 class RestaurantUpdate extends Component {
   constructor() {
     super();
@@ -46,73 +47,77 @@ class RestaurantUpdate extends Component {
     // We are logging all the props we got from app.js
     // console.log(this.state);
     return (
-      <Container>
-        <h1>Restaurant Update</h1>
-        <div>
-          <Form.Control
-            type="text"
-            placeholder="Restaurant name"
-            value={this.state.name}
-            onChange={(event) => {
-              this.setState({
-                name: event.target.value,
-              });
-            }}
-          />
-          <br />
-       
-          <Form.Control
-            type="text"
-            placeholder="Restaurant email"
-            value={this.state.email}
-            onChange={(event) => {
-              this.setState({
-                email: event.target.value,
-              });
-            }}
-          />
-          <br />
-        
-          <Form.Control
-            type="text"
-            placeholder="Restaurant address"
-            value={this.state.name}
-            onChange={(event) => {
-              this.setState({
-                address: event.target.value,
-              });
-            }}
-          />
-          <br />
-         
-          <Form.Control
-            type="text"
-            placeholder="Restaurant rating"
-            value={this.state.rating}
-            onChange={(event) => {
-              this.setState({
-                rating: event.target.value,
-              });
-            }}
-          />
-          <br />
-         
-          <div className="mb-2">
-            <Button variant="primary" size="lg">
-              Submit
-            </Button>{" "}
-          </div>
+      <div>
+        {" "}
+        <RestaurantNavbar />
+        <Container>
+          <h1>Restaurant Update</h1>
+          <div>
+            <Form.Control
+              type="text"
+              placeholder="Restaurant name"
+              value={this.state.name}
+              onChange={(event) => {
+                this.setState({
+                  name: event.target.value,
+                });
+              }}
+            />
+            <br />
 
-          {/* 
-          <button
-            onClick={() => {
-              this.update();
-            }}
-          >
-            Update Restaurant
-          </button> */}
-        </div>
-      </Container>
+            <Form.Control
+              type="text"
+              placeholder="Restaurant email"
+              value={this.state.email}
+              onChange={(event) => {
+                this.setState({
+                  email: event.target.value,
+                });
+              }}
+            />
+            <br />
+
+            <Form.Control
+              type="text"
+              placeholder="Restaurant address"
+              value={this.state.name}
+              onChange={(event) => {
+                this.setState({
+                  address: event.target.value,
+                });
+              }}
+            />
+            <br />
+
+            <Form.Control
+              type="text"
+              placeholder="Restaurant rating"
+              value={this.state.rating}
+              onChange={(event) => {
+                this.setState({
+                  rating: event.target.value,
+                });
+              }}
+            />
+            <br />
+
+            <div className="mb-2">
+              <Button variant="primary" size="lg">
+                Submit
+              </Button>{" "}
+            </div>
+
+            {/* 
+         <button
+           onClick={() => {
+             this.update();
+           }}
+         >
+           Update Restaurant
+         </button> */}
+          </div>
+        </Container>
+      </div>
     );
   }
 }

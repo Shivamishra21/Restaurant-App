@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import RestaurantNavbar from "./RestaurantNavbar";
 class RestaurantDetail extends Component {
     render() {
         return (
